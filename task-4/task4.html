@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let counter = +prompt("Введите начальное значение(число)");
+        let end = +prompt("Введите конченое значение");
+
+        const intervalId = setInterval(function () {
+            console.log(counter++);
+        }, 1000);
+
+        const timeoutId = setTimeout(function () {
+            clearInterval(intervalId);
+        }, function (num) {
+            num -= 1;
+            return num + "000";
+        }(end));
+    </script>
+</body>
+
+</html>
